@@ -2,10 +2,13 @@ import React from "react";
 import EducationContainer from "./EducationContainer";
 import ExperienceContainer from "./ExperienceContainer";
 import Personal from "./Personal";
+import AboutMe from "./AboutMe";
 
 const CVform = ({
   cv,
   onChangePersonal,
+  onDeleteAboutMe,
+  onChangeAboutMe,
   onChangeExperience,
   onAddExperience,
   onDeleteExperience,
@@ -20,6 +23,7 @@ const CVform = ({
   return (
     <div>
       <Personal personal={cv.personal} onChange={onChangePersonal} />
+      <AboutMe about={cv.about} onChange={onChangeAboutMe}/>
       <ExperienceContainer
         experience={cv.experience}
         onChange={onChangeExperience}

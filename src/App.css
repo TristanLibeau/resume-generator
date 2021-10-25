@@ -39,6 +39,14 @@ body {
   max-width: 95vw;
 }
 
+.about-div {
+  background-color: var(--containerColor);
+  margin: 0px auto 40px auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.4);
+}
 .personal-div {
   background-color: var(--containerColor);
   display: flex;
@@ -60,6 +68,11 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0px 20px 10px 20px;
+}
+
+.about-form  {
+  display:flex;
+  flex-direction: column;
 }
 .personal-input {
   margin: 5px 3px;
@@ -137,6 +150,15 @@ body {
   margin: 0px auto 10px auto;
 }
 .experience-textarea {
+  margin: 5px 3px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-textarea {
   margin: 5px 3px;
   padding: 5px;
   border-radius: 5px;
