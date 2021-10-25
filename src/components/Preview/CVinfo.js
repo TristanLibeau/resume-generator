@@ -1,8 +1,9 @@
 import React from "react";
 import CVexperience from "./CVexperience";
 import CVeducation from "./CVeducation";
+import CVaboutme from "./CVaboutme";
 
-const CVinfo = ({ experience, education }) => {
+const CVinfo = ({ experience, education, about}) => {
     const experiences = experience.map((exp) => (
         <CVexperience key={exp.id} experience={exp} />
     ))
@@ -11,8 +12,13 @@ const CVinfo = ({ experience, education }) => {
         <CVeducation key={edu.id} education={edu} />
     ))
 
+
     return(
         <div className="preview-content-container">
+            <div className="section-container">
+                <p className="cv-section-title">About Me</p>
+                {about.textValue}
+            </div>
             <div className="section-container">
                 <p className="cv-section-title">Experience</p>
                 {experiences}

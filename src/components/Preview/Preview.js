@@ -13,6 +13,7 @@ class Preview extends Component {
         <CVheader personal={cv.personal} />
         <CVinfo
           personal={cv.personal}
+          about={cv.about}
           experience={cv.experience}
           education={cv.education}
         />

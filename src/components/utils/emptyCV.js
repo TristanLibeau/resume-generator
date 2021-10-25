@@ -12,6 +12,13 @@ const exampleCV = {
     phone: "",
     email: "",
   },
+
+  about: {
+    id: uuidv4(),
+    textValue: "",
+
+  },
+
   experience: [
     {
       id: uuidv4(),

@@ -24,6 +24,15 @@ const Main = () => {
     }));
   };
 
+  const handleChangeAboutMe = (e, id) => {
+    const {name, value,} = e.target;
+
+    setCV((prevState) => ({
+      ...prevState,
+      about: { ...prevState.about, [name]: value },
+    }));
+  };
+
   const handleChangeFile = (e) => {
     const { name } = e.target;
     const file = e.target.files[0];
@@ -148,6 +157,7 @@ const Main = () => {
         onPrint={handlePrint}
         onLoadExample={handleLoadExample}
         onReset={handleReset}
+        onChangeAboutMe={handleChangeAboutMe}
       />
       <Preview cv={cv} ref={componentRef} />
     </div>

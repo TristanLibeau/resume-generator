@@ -1,7 +1,6 @@
 import React from 'react';
-import Input from '../utils/input';
 import TextArea from '../utils/textarea';
-import Button from "../utils/Button";
+
 
 const AboutMe = ({ id, about, onChange }) => {
     return(
@@ -12,7 +11,7 @@ const AboutMe = ({ id, about, onChange }) => {
                     onChange={(e) => onChange(e, id)}
                     name="textValue"
                     placeholder="Description"
-                    // value={about.textValue}
+                    value={about.textValue}
                     className="about-textarea"
                 />
                 {/* <Button text="Delete this entry" onClick={() => onDelete(id)} className="personal-button delete-button"></Button> */}
