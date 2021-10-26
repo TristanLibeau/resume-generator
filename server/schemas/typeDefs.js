@@ -11,10 +11,12 @@ const typeDefs = gql`
 
     type Auth {
         token: ID!
-        student: Student
+        user: user
     }
 
     type Query {
+        users: [user]
+        user(username: String!: User 
         me: User
     }
 
