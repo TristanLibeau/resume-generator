@@ -1,7 +1,7 @@
 import React from "react";
 import CVexperience from "./CVexperience";
 import CVeducation from "./CVeducation";
-import CVaboutme from "./CVaboutme";
+// import CVaboutme from "./CVaboutme";
 
 const CVinfo = ({ experience, education, about}) => {
     const experiences = experience.map((exp) => (
