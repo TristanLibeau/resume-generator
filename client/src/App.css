@@ -264,6 +264,11 @@ body {
   display: none;
 }
 
+.nav-link {
+  display:block;
+  padding: 0.5rem 1rem;
+}
+
 @media (max-width: 1300px) {
   .main-content {
     flex-direction: column;
