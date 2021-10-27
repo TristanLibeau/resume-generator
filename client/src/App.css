@@ -206,7 +206,7 @@ body {
 .cv-header {
   grid-column: span 2;
   padding: 1.5rem 2rem;
-  background-color: blue;
+  background-color: rgb(6, 6, 139);
   color: whitesmoke;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
