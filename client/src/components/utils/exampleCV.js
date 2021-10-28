@@ -1,11 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
-import exampleAvatar from "../../assets/example_avatar_2.png";
+import exampleAvatar from "../../assets/example_avatar_2.jpg";
 
 const exampleCV = {
   personal: {
-    firstName: "Harold",
-    lastName: "Smith",
-    currentRole: "Web Developer",
+    firstName: "Tristan",
+    lastName: "Libeau",
+    currentRole: "Job title",
     photo: exampleAvatar,
     address1: "Fake adress, Sydney, Australia",
     address2: "Unit B",
@@ -13,35 +13,35 @@ const exampleCV = {
     email: "fakeemail@gmail.com",
   },
   about: {
-    textValue:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+    textValue:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
   },
   experience: [
     {
       id: uuidv4(),
-      position: "Senior Web Developer",
+      position: "Job title",
       company: "Fake Compagnie",
       address: "Fake Address",
       from: "2018",
       to: "Current",
-      description: "Lead Web Developer for the department. Utilize React framework to build the web landscape. Perform routine site audits, as well as ongoing maintenance, on an as-needed basis.",
+      description: "Lead Web Developer for the department. Utilize React framework to build the web landscape.",
     },
     {
       id: uuidv4(),
-      position: "Web Developer",
+      position: "Job title",
       company: "Fake Company 2",
       address: "An other fake adress",
       from: "2015",
       to: "2018",
-      description: "Build and optimize a secure web page for evolving business needs. Worked closely with other Web Developers, Graphic Designers and Programmers to create websites that fulfill both the technical and design needs of clients.",
+      description: "Build and optimize a secure web page for evolving business needs. Worked closely with other Web Developers.",
     },
     {
       id: uuidv4(),
-      position: "Web Developer Intern",
+      position: "Job title",
       company: "Fake compagnie 3",
       address: "An other fake adress",
       from: "2014",
       to: "2015",
-      description: "Provide continued support for one or more web properties. Code and script applications. Maintain communication with team members and supervisors concerning the direction of the website.",
+      description: "Provide continued support for one or more web properties. Code and script applications.",
     },
   ],
   education: [
