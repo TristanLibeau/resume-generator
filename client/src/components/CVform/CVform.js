@@ -20,10 +20,12 @@ const CVform = ({
   onReset,
   onSave,
 }) => {
+
+  
   return (
     <div>
       <Personal personal={cv.personal} onChange={onChangePersonal} />
-      <AboutMe about={cv.about} onChange={onChangeAboutMe}/>
+      <AboutMe about={cv.about} onChange={onChangeAboutMe} />
       <ExperienceContainer
         experience={cv.experience}
         onChange={onChangeExperience}
