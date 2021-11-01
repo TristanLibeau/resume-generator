@@ -21,8 +21,13 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    resume: [
+      {
+        type: Schema.Types.ObjectId, 
+        ref: 'Resume'
+      }
+    ]
   },
-  // set this to use virtual below
   {
     toJSON: {
       virtuals: true,
