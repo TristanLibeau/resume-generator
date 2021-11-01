@@ -23,12 +23,8 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
+        addResume(args: String!, context: String!): Auth
     }  
 `;
 
 module.exports = typeDefs;
-
-// type Auth {
-//     token: ID!        ID has an unique identifier, in this case is the token
-//     student: Student  Refers to student profile
-// }
