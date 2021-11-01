@@ -36,9 +36,13 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addResume: async (parent, args, context) => {
-      return Resume.findOneAndUpdate({args, context})
-        
+    addResume: async (parent, { resume }, context) => {
+      if (context.user) {
+        const resume = new Resume( resume );
+        await User.findByIdAndUpdate(context.user._id, { $push: { resume: resume } });
+        return resume;
+      }
+      throw new AuthenticationError('Not logged in');
     },
   }
 };  

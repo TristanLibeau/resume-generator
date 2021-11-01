@@ -7,6 +7,28 @@ const typeDefs = gql`
         username: String
         email: String
         password: String
+        resume: [Resume]
+    }
+
+    type Resume {
+        fristname: String
+        lastname: String
+        currentrole: String
+        address1: String
+        address2: String
+        phone: String
+        email: String
+        textValue: String
+        position: String
+        company: String
+        from: String
+        to: String
+        description: String
+        school: String
+        address: String
+        degree: String
+        focus: String
+
     }
 
     type Auth {
@@ -23,7 +45,7 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
-        addResume(args: String!, context: String!): Auth
+        addResume(resume: resume): Auth
     }  
 `;
 
