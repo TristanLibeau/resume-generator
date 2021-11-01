@@ -36,10 +36,10 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addResume: async (parent, args, context) => {
-         
+    // addResume: async (parent, args, context) => {
+    //   return Resume.findOneAndUpdate({args, context})
         
-    },
+    // },
   }
 };  
 
