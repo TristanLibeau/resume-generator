@@ -21,12 +21,12 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    resume: [
+    resume: 
       {
         type: Schema.Types.ObjectId, 
         ref: 'Resume'
       }
-    ]
+    
   },
   {
     toJSON: {
