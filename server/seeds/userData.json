@@ -1,5 +1,12 @@
 [
     {
-     
+        "username": "billie",
+        "email": "test1@test.com",
+        "password": "123456",
+        
+     "firstname": "billie",
+     "lastname": "the kid",
+     "from": "2001",
+     "to": "2008"
     }
 ]

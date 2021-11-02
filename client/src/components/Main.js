@@ -143,6 +143,10 @@ const Main = () => {
     bodyClass: "scale",
   });
 
+  const handleSaveResume = () => {
+
+  };
+
   return (
     <div className="main-content">
       <CVform
@@ -158,6 +162,7 @@ const Main = () => {
         onLoadExample={handleLoadExample}
         onReset={handleReset}
         onChangeAboutMe={handleChangeAboutMe}
+        onChange={handleSaveResume}
       />
       <Preview cv={cv} ref={componentRef} />
     </div>
