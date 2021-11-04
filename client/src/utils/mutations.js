@@ -24,3 +24,28 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const SAVE_RESUME = gql`
+  mutation saveResume($resumeData: Resume!) {
+    saveResume(resumeData: $resumeData) {
+      firstname
+      lastname
+      currentrole
+      address1
+      address2
+      phone
+      email
+      textValue
+      position
+      compagny
+      from
+      to
+      description
+      school
+      address
+      degree
+      focus
+      createdBy
+    }
+  }
+`;

@@ -36,7 +36,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addResume: async (parent, { resume }, context) => {
+    saveResume: async (parent, { resume }, context) => {
       if (context.user) {
         const resume = new Resume( resume );
         await User.findByIdAndUpdate(context.user._id, { $push: { resume: resume } });
