@@ -162,7 +162,7 @@ const Main = () => {
         onLoadExample={handleLoadExample}
         onReset={handleReset}
         onChangeAboutMe={handleChangeAboutMe}
-        onChange={handleSaveResume}
+        onSave={handleSaveResume}
       />
       <Preview cv={cv} ref={componentRef} />
     </div>

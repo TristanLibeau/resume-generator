@@ -39,7 +39,7 @@ const resolvers = {
     saveResume: async (parent, { resume }, context) => {
       if (context.user) {
         const resume = new Resume( resume );
-        await User.findByIdAndUpdate(context.user._id, { $push: { resume: resume } });
+        await User.findByIdAndUpdate(context.user._id, { $set: { resume: resume } });
         return resume;
       }
       throw new AuthenticationError('Not logged in');
