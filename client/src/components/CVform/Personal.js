@@ -3,6 +3,8 @@ import Input from '../utils/input';
 import Photo from '../utils/Photo';
 
 const Personal = ({ personal, onChange }) => {
+    const getToken = localStorage.getItem("id_token")
+    if(getToken){
     return(
         <div className="personal-div">
             <div className="personal-form">
@@ -72,7 +74,15 @@ const Personal = ({ personal, onChange }) => {
                     />
             </div>
         </div>
-    )
+    )} else {
+        return(
+            <div>
+                <h5>
+                    
+                </h5>
+            </div>
+        )
+    }
 }
 
 export default Personal;

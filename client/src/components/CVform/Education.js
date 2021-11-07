@@ -3,6 +3,8 @@ import Input from '../utils/input';
 import Button from "../utils/Button";
 
 const Education = ({ id, education, onChange, onDelete }) => {
+    const getToken = localStorage.getItem("id_token")
+    if(getToken){
     return(
             <div className="personal-form">
                 <Input
@@ -57,7 +59,15 @@ const Education = ({ id, education, onChange, onDelete }) => {
                 </div>
                 <Button text="Delete this entry" onClick={() => onDelete(id)} className="personal-button delete-button"></Button>
         </div>
-    )
+    )} else {
+        return(
+            <div>
+                <h5>
+                    You need to login or sign Up to be able to use the app.
+                </h5>
+            </div>
+        )
+    }
 }
 
 export default Education;

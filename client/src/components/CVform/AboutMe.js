@@ -3,6 +3,8 @@ import TextArea from '../utils/textarea';
 
 
 const AboutMe = ({ id, about, onChange }) => {
+    const getToken = localStorage.getItem("id_token")
+    if(getToken){
     return(
         <div className='about-div'>
             <div className="about-form">
@@ -14,11 +16,19 @@ const AboutMe = ({ id, about, onChange }) => {
                     value={about.textValue}
                     className="about-textarea"
                 />
-                {/* <Button text="Delete this entry" onClick={() => onDelete(id)} className="personal-button delete-button"></Button> */}
             </div>
         </div>    
 
-    )
+    )} else {
+        return(
+            <div>
+                <h5>
+                   
+                </h5>
+            </div>
+        )
+    }
+
 }
 
 export default AboutMe;
