@@ -1,14 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ApolloProvider } from "@apollo/react-hooks";
-// import { setContext } from '@apollo/client/link/context';
 import  ApolloClient  from "apollo-boost";
-// import {
-//   InMemoryCache,
-//   ApolloProvider,
-//   createHttpLink,
-// } from '@apollo/client';
-
 import Main from "./components/Main";
 import Header from "./components/Header";
 import './App.css';
