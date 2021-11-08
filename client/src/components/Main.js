@@ -5,8 +5,12 @@ import exampleCV from "./utils/exampleCV";
 import { v4 as uuidv4 } from "uuid";
 import Preview from "./Preview/Preview";
 import { useReactToPrint } from "react-to-print";
+import { useMutation } from "@apollo/client";
+import { SAVE_RESUME } from "../utils/mutations";
 
 const Main = () => {
+  const [addResume, { error, data }] = useMutation(SAVE_RESUME);
+
   const [cv, setCV] = useState(emptyCV);
 
   const handleChangePersonal = (e) => {
@@ -143,8 +147,16 @@ const Main = () => {
     bodyClass: "scale",
   });
 
-  const handleSaveResume = () => {
-    
+  const handleSaveResume = async (event) => {
+    event.preventDefault();
+    console.log(cv)
+  try { 
+    const { data } = await addResume({
+      variables: { ...cv },
+    });
+  } catch (e) {
+    console.error(e);
+  }
   };
 
   return (

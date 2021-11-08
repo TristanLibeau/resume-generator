@@ -13,7 +13,13 @@ const resolvers = {
       }
       throw new AuthenticationError("Not logged in");
     },
+    users: async (parent, args, context) => {
+      return await User.find({}) 
+      
+      
+    }
   },
+  
 
   Mutation: {
     login: async (parent, { email, password }) => {
@@ -37,6 +43,7 @@ const resolvers = {
       return { token, user };
     },
     saveResume: async (parent, { resume }, context) => {
+      console.log(resume)
       if (context.user) {
         const resume = new Resume( resume );
         await User.findByIdAndUpdate(context.user._id, { $set: { resume: resume } });
