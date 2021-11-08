@@ -150,13 +150,13 @@ const Main = () => {
   const handleSaveResume = async (event) => {
     event.preventDefault();
     console.log(cv)
-  try { 
+    try { 
     const { data } = await addResume({
       variables: { ...cv },
     });
-  } catch (e) {
+    }  catch (e) {
     console.error(e);
-  }
+    }
   };
 
   return (
